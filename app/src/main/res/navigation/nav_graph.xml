@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/customerReviewFragment">
+
+    <fragment
+        android:id="@+id/customerHomeFragment"
+        android:name="com.s3cilabs.mvvmtest2.CustomerHomeFragment"
+        android:label="fragment_customer_home"
+        tools:layout="@layout/fragment_customer_home" >
+        <action
+            android:id="@+id/action_customerHomeFragment_to_customerAddEditFragment"
+            app:destination="@id/customerAddEditFragment" />
+        <action
+            android:id="@+id/action_customerHomeFragment_to_customerReviewFragment"
+            app:destination="@id/customerReviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerAddEditFragment"
+        android:name="com.s3cilabs.mvvmtest2.CustomerAddEditFragment"
+        android:label="fragment_customer_add_edit"
+        tools:layout="@layout/fragment_customer_add_edit" >
+        <action
+            android:id="@+id/action_customerAddEditFragment_to_customerHomeFragment"
+            app:destination="@id/customerHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerReviewFragment"
+        android:name="com.s3cilabs.mvvmtest2.CustomerReviewFragment"
+        android:label="fragment_customer_review"
+        tools:layout="@layout/fragment_customer_review" >
+        <action
+            android:id="@+id/action_customerReviewFragment_to_customerHomeFragment"
+            app:destination="@id/customerHomeFragment" />
+        <argument
+            android:name="selectedCustomerId"
+            app:argType="integer"
+            android:defaultValue="-9999" />
+    </fragment>
+</navigation>

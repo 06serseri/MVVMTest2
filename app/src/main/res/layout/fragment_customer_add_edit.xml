@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".CustomerAddEditFragment">
+
+    <EditText
+        android:id="@+id/et_customer_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Customer Name" />
+
+    <EditText
+        android:id="@+id/et_customer_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_customer_name"
+        android:hint="Customer Address" />
+
+    <EditText
+        android:id="@+id/et_customer_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_customer_address"
+        android:hint="Customer Email" />
+
+    <Button
+        android:id="@+id/btn_save_customer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_customer_email"
+        android:text="Save" />
+
+
+
+</RelativeLayout>
